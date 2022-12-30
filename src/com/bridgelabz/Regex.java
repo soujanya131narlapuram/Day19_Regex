@@ -60,7 +60,7 @@ public class Regex {
         }
     }
     static boolean passwordValidation(String password){
-        Pattern pattern = Pattern.compile("[^ ]{8,}");
+        Pattern pattern = Pattern.compile("^(?=[A-Za-z0-9@#$%^&+!=]+$)^(?=.*[A-Z])(?=.{8,}).*$");
         Matcher matcher = pattern.matcher(password);
         boolean matchFound = matcher.matches();
 
