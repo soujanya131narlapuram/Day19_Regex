@@ -5,6 +5,8 @@ public class RegexMain {
         Regex.firstNameValidation("Soujanya");
         Regex.firstNameValidation("souju");
         Regex.lastNameValidation("Narlapuram");
-        Regex.lastNameValidation("koli");
+        Regex.lastNameValidation("kolipaka");
+        Regex.emailValidation("SOUJANYA131@GMAIL.COM");
+        Regex.emailValidation("soujanya131@gmail");
     }
 }

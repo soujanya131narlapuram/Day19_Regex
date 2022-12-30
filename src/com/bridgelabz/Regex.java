@@ -11,10 +11,10 @@ public class Regex {
         boolean matchFound = matcher.matches();
 
         if(matchFound){
-            System.out.println("Name " + firstName + " is having valid format ");
+            System.out.println("Name " + firstName + " is having valid pattern ");
             return true;
         } else {
-            System.out.println("Name " + firstName + " is not having valid format");
+            System.out.println("Name " + firstName + " is not having valid pattern");
             return false;
         }
     }
@@ -25,10 +25,24 @@ public class Regex {
         boolean matchFound = matcher.matches();
 
         if(matchFound){
-            System.out.println("Name " + lastName + " is having valid format ");
+            System.out.println("Name " + lastName + " is having valid pattern ");
             return true;
         } else {
-            System.out.println("Name " + lastName + " is not having valid format");
+            System.out.println("Name " + lastName + " is not having valid pattern");
+            return false;
+        }
+    }
+
+    static boolean emailValidation(String email){
+        Pattern pattern = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,6}$");
+        Matcher matcher = pattern.matcher(email);
+        boolean matchFound = matcher.matches();
+
+        if(matchFound){
+            System.out.println("Email " + email + " is having valid pattern");
+            return true;
+        } else {
+            System.out.println("Email " + email + " is not having valid pattern");
             return false;
         }
     }
