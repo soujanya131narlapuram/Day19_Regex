@@ -59,4 +59,17 @@ public class Regex {
             return false;
         }
     }
+    static boolean passwordValidation(String password){
+        Pattern pattern = Pattern.compile("[^ ]{8,}");
+        Matcher matcher = pattern.matcher(password);
+        boolean matchFound = matcher.matches();
+
+        if(matchFound){
+            System.out.println("Password " + password + " is having valid pattern");
+            return true;
+        } else {
+            System.out.println("Password " + password + " is not having valid pattern");
+            return false;
+        }
+    }
 }

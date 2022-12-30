@@ -10,5 +10,7 @@ public class RegexMain {
         Regex.emailValidation("soujanya131@gmail");
         Regex.mobileNumberValidation("91 7382573349");
         Regex.mobileNumberValidation("7382573349");
+        Regex.passwordValidation("pwd123");
+        Regex.passwordValidation("souju@234");
     }
 }
