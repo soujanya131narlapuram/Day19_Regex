@@ -8,5 +8,7 @@ public class RegexMain {
         Regex.lastNameValidation("kolipaka");
         Regex.emailValidation("SOUJANYA131@GMAIL.COM");
         Regex.emailValidation("soujanya131@gmail");
+        Regex.mobileNumberValidation("91 7382573349");
+        Regex.mobileNumberValidation("7382573349");
     }
 }
