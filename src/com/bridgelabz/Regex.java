@@ -64,7 +64,15 @@ public class Regex {
         Matcher matcher = pattern.matcher(password);
         boolean matchFound = matcher.matches();
 
-        if(matchFound){
+        pattern = Pattern.compile("^[A-Za-z0-9]*[@#$%^&+!=]{1}[A-Za-z0-9]*$");
+        matcher = pattern.matcher(password);
+
+        int count = 0;
+        while (matcher.find()) {
+            count++;
+        }
+
+        if(matchFound && count==1){
             System.out.println("Password " + password + " is having valid pattern");
             return true;
         } else {
